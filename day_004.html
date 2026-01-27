@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "welcome !";
+        console.log(str, typeof(str));
+        let a = '';
+        console.log(a,typeof(a));
+        
+        // you can use quotes in output like this
+        let s1 = "Hey, My name is 'Ankit'.hello";
+        console.log(s1);
+        let s2 = 'Hey, My name is "Ankit". helllo';
+        console.log(s2);
+
+        // or like this
+        let s3 = "Hey, My name is \"Ankit\".hello";
+        console.log(s3);
+        let s4 = 'Hey, My name is \'Ankit\'. helllo';
+        console.log(s4);
+
+        // length of string
+        let s5 = "cybrom";
+        console.log("length of " + s5 ," = ", s5.length);
+
+        // slice()
+        let s6 = "Welcome to cybrom";
+        console.log(s6.slice(3));
+        let s7 = "Welcome to cybrom";
+        console.log(s6.slice(3,7));
+
+        // substring()
+        let s8 = "Welcome to cybrom";
+        console.log(s8.substring(3));
+        let s9 = "Welcome to cybrom";
+        console.log(s9.substring(3,7));
+
+        // slice() and substring() are same. the difference is slice can have negative values but substring() cannot have negative values.
+
+        // substr()
+        let s10 = "Welcome to cybrom";
+        console.log(s10.substr(3));
+        let s11 = "Welcome to cybrom";
+        console.log(s11.substr(3,7));
+
+        // charAt()
+        let str2 = "Welcome to cybrom";
+        console.log(str2.charAt(0));
+        // you can acces string character using [],but cannot update it.
+        console.log(str2[5]);
+
+        // includes()
+        let str3 = "Welcome to the city of lakes Bhopal";
+        console.log(str3.includes("lakes"));
+        console.log(str3.includes("likes"));
+
+        // third way to create string (backtick or template literals)
+        let s = `hey, how are you`;
+    </script>
+</body>
+</html>
