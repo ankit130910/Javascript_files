@@ -1,0 +1,50 @@
+           <!--  Strings using backtick and its advantages  and Array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = `learn js from cybrom`;
+        console.log(str, typeof(str));
+        // feauture 1 -- you can write multi-line string using backtick.
+        let s = `house no - 24
+        shashi kunj, 
+        lakherapura,
+        bhopal`;
+        console.log(s,typeof(s));
+
+        // feature 2 -- backtick allows variable substitution without concatenation
+        let name = "Ankit"
+        let age = 22;
+        let city = "Bhopal";
+        let s2 = "I am " +name + " from " + city + " my age is " + age;  // Concatenation
+        console.log(s2);
+        let s3 = `I am ${name} from ${city}. my age is ${age}.`;   // Variable substitution
+        console.log(s3);
+
+        // feature 3 -- you can write expression with backtick
+
+        let length = 5.2;
+        let breadth = 6.44;
+        let area = `area of rectangle = ${(length * breadth).toFixed(2)}`;
+        console.log(area);   // toFixed() - upto n decimal places
+
+        // feature 4 -- You can use both single and double quotes within the string
+        let s4 = `Hello "Ankit", You are learning 'Javascript'`;
+        console.log(s4);
+
+        // Array in js
+        let arr = ["ajay", 'amit', true, 45, 45.6, {"fees":45000}];
+        console.log(arr);
+        console.log(arr[1]);
+        console.log(arr[3]);
+        console.log(arr[5]);
+        console.log(arr[5].fees);
+
+    </script>
+</body>
+</html>
