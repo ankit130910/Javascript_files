@@ -1,0 +1,61 @@
+             <!-- Array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = ['ankit','amit', 'rachit','harsh'];
+        console.log(name);
+        //  length of array
+        console.log(name.length);
+
+        // toString() - to convert array into comma separated array values
+        let s = name.toString();
+        console.log(s), typeof(s);
+
+        // join() - same as toSting() but u can specify the separator
+        let s2 = name.join(" - ");
+        console.log(s2), typeof(s2);
+        console.log(name.join(" , "));
+        console.log(name.join());          // default behaviour is same as toString()
+
+        // pop() - removes last element
+        let r = name.pop();
+        console.log(name);
+        console.log(r);
+
+        // push() - add new element at the last
+        let p = name.push("unnati");
+        console.log(name);
+        console.log(p);       // return length of updated array
+
+        // shift() - removes first element of the array
+        let q = name.shift();
+        console.log(name);
+        console.log(q);
+
+        // unshift() - adds new element at the beginning
+        let u = name.unshift("Ankit");
+        console.log(name);
+        console.log(u);        // return length of updated array
+
+        // splice() - add new items in an array
+        name.splice(2,0,"Ram", "Shyam");
+        console.log(name);
+
+        name.splice(2,2,"Karan", "Arjun");
+        console.log(name);
+
+        // slice()
+        console.log(name.slice(3));           // first parameter passes starting index
+        console.log(name.slice(1,5));        // second parameter tells last index
+
+
+
+    </script>
+</body>
+</html>
