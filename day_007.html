@@ -1,0 +1,54 @@
+<!--  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // sort() - to sort an array in increasing order on the basis of string
+        const name = ['ankit','amit', 'rachit','harsh'];
+        const num = [12,4,82,56,743,9];
+        console.log(name);
+        console.log(name.sort());
+        console.log(num);
+        console.log(num.sort());
+
+        // to sort in decreasing order first it then reverse it
+        // reverse() - to reverse an array
+        console.log(name.reverse());
+
+
+
+        // object
+        // creating an object
+        const student = {
+            'rollno' : 33,
+            'name' : 'Ankit',
+            'city' : 'bhopal',
+            'fees' : 45000
+        };
+        // ways of accesing values using key
+        console.log(student.rollno);
+        console.log(student['name']);
+
+        // Array of objects
+        const emp = [{'eno' : 101, 'name' : 'ankit', 'dept': 'account', 'salary' : 45000},
+        {'eno' : 102, 'name' : 'ankit', 'dept': 'marketing', 'salary' : 25000},
+        {'eno' : 103, 'name' : 'amiit', 'dept': 'sales', 'salary' : 35000},
+        {'eno' : 104, 'name' : 'aniket', 'dept': 'admin', 'salary' : 36000},
+        {'eno' : 105, 'name' : 'anish', 'dept': 'hr', 'salary' : 40000},
+        {'eno' : 106, 'name' : 'ankur', 'dept': 'accounting', 'salary' : 35000}
+        ]
+
+        console.log(emp[0].name);
+        console.log(emp[3]['dept']);
+
+        // date object
+        const d = new Date();
+        console.log(d);
+    </script>
+  </body>
+  </html>
