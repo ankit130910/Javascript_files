@@ -1,0 +1,49 @@
+                       <!-- Date object -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4 ways to create date object
+
+        // 1
+        const d = new Date();
+        document.write("<h1>", d , "</h1>");
+
+        // 2 
+        const d2 = new Date(2022,2,9, 14, 56,30, 444);    // it requires minimum 2 parameters
+        document.write("<h1>", d2 , "</h1>");
+
+        // 3 new Date(millisecs) -- creates a new object as zero time plus millisecs
+        const d3 = new Date(86400000);      // 1 day = 86400000 ms
+        document.write("<h1>", d3 , "</h1>");
+
+        // 4 - new Date(date string)
+        const d4 = new Date("2015-05-25");
+        document.write("<h1>", d4 , "</h1>");
+        const d5 = new Date("03/25/2015");
+        document.write("<h1>", d5 , "</h1>");
+        const d6 = new Date("mar 25 2015");
+        document.write("<h1>", d6 , "</h1>");
+        const d7 = new Date("25 mar 2015");
+        document.write("<h1>", d7 , "</h1>");
+
+        // methods of date in js
+
+        // parse() - to calculate total milliseconds to a date since discovery of js
+        // calculating milliseconds since my birth
+        const dob = new Date("2003-05-13");
+        const t = new Date("2026-02-02");
+        document.write("<h1>", Date.parse(t) - Date.parse(dob)  , "</h1>");
+
+        // now() - to calculate total milliseconds till now since discovery of js
+        document.write("<h1>", Date.now()  , "</h1>");
+
+
+    </script>
+</body>
+</html>
