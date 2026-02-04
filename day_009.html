@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  getFullYear() - to fetch year of a particular date
+        const d = new Date();
+        const ans = d.getFullYear();
+        document.write("<h1>", ans, "</h1>");
+
+        // getMonth() - to fetch month(0-11)
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun" ]
+        const m = d.getMonth();
+        document.write("<h1>", months[m] , "</h1>");
+
+        // getDate() - returns date (1-31)
+        const dt = d.getDate();
+        document.write("<h1>", dt, "</h1>");
+
+        // getHour() - returns hour(0-23)
+        const h = d.getHours();
+        document.write("<h1>", h, "</h1>");
+
+        // getMinutes() - returns minutes (0-59)
+        const min = d.getMinutes();
+        document.write("<h1>", min, "</h1>");
+
+        // getseconds() - returns seconds(0-59)
+        const sec = d.getSeconds();
+        document.write("<h1>", sec , "</h1>");
+
+        // getMilliseconds() - returns ms (0-999)
+        const ms = d.getMilliseconds();
+        document.write("<h1>", ms, "</h1>");
+
+        // getDay() - returns day (0-6)
+        const days = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"]
+        const day = d.getDay();
+        document.write("<h1>", days[day], "</h1>");
+
+
+
+        // Math - object allows to perform mathemmatical operations
+        const pi = Math.PI;
+        document.write("<h1>", pi, "</h1>");
+
+        // round() - round up the values and removes decimal
+        const r = Math.round(34.462413);
+        document.write("<h1>", r, "</h1>");
+
+        // ceil() - rounds up the value upwards
+        const c = Math.ceil(34.3215);
+        document.write("<h1>", c, "</h1>");
+
+        // floor() = rounds up the value downwards
+        const f = Math.floor(34.875);
+        document.write("<h1>", f, "</h1>");
+
+        // trunc() - removes values after decimal without rounding
+        const t = Math.trunc(34.875466);
+        document.write("<h1>", t, "</h1>");
+        
+        const p = Math.pow(5,6);
+        document.write("<h1>", p, "</h1>");
+
+        const s = Math.sqrt(81)
+        document.write("<h1>", s, "</h1>");
+
+        // random() - generates random number between 0-1
+        const ran = Math.random();
+        document.write("<h1>", ran, "</h1>");
+        
+    </script>
+</body>
+</html>
