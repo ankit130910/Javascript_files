@@ -1,3 +1,4 @@
+           <!-- Methods of Date object and Math class -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,8 +44,9 @@
         document.write("<h1>", days[day], "</h1>");
 
 
+        //  ---------------------- MATH CLASS ------------------------
 
-        // Math - object allows to perform mathemmatical operations
+        // Math - class allows to perform mathemmatical operations
         const pi = Math.PI;
         document.write("<h1>", pi, "</h1>");
 
@@ -73,6 +75,18 @@
         // random() - generates random number between 0-1
         const ran = Math.random();
         document.write("<h1>", ran, "</h1>");
+
+        // to generate random numbers from 0-9
+        const ran2 = Math.floor(Math.random()*10);
+        document.write("<h1>", ran2, "</h1>");
+
+        // to generate random numbers from 0-10
+        const ran3 = Math.floor(Math.random()*11);
+        document.write("<h1>", ran3, "</h1>");
+
+        // to generate random numbers from 1-10
+        const ran4 = Math.floor(Math.random()*10) + 1;
+        document.write("<h1>", ran4, "</h1>");
         
     </script>
 </body>
