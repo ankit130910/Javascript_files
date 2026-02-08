@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // element.innerHTML
+        function display(){
+            document.getElementById("demo").innerHTML = "We are learning js";
+        }
+
+        // element.attribute
+        function display2(){
+            document.getElementById("textval").value = "Indore";
+        }
+        function display3(){
+            const obj = document.getElementById("democss");
+            obj.style.color = "blueviolet";
+            obj.style.fontSize = "48px";
+            obj.style.textDecoration = "underline";
+        }
+    </script>
+</head>
+<body>
+    <!-- element.innerHTML -->
+    <button onclick="display()">click here</button>
+    <h1 id="demo">Welcome to Cybrom</h1>
+
+    <!-- element.attribute -->
+    Enter city : <input type="text" value="Bhopal" id="textval">
+    <button onclick="display2()">click to change city</button>
+
+    <!-- element.style.property -->
+    <h1 id="democss" style="color: red">Welcome to Cybrom,Bhopal</h1>
+    <button onclick="display3()">click to change css</button>
+
+</body>
+</html>
