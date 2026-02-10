@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function display(){
+        //     alert("Welcome !!");
+        // }
+
+        function display1(){
+        let obj = document.getElementById("demo");
+            obj.style.width = "400px";
+            obj.style.height = "400px";
+            obj.style.border = "4px solid red";
+        }
+
+        function display2(){
+        let obj = document.getElementById("demo");
+            obj.style.width = "400px";
+            obj.style.backgroundColor = "pink";
+            obj.style.borderRadius = "50%";
+        }
+        function display3(){
+        let obj = document.getElementById("demo");
+            obj.style.width = "400px";
+            obj.style.height = "300px";
+            obj.style.backgroundColor = "pink";
+            obj.style.fontSize = "24px";
+            obj.style.border = "4px solid red";
+            obj.style.textAlign = "center";
+            obj.style.lineHeight = "10";
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Event handling -->
+    <!-- <button onclick="display()">Click Here</button>
+    <button onmouseover="display()">on mouse over</button>
+    <button onmouseout="display()">on mouse out</button> -->
+
+    <button onclick="display1()">btn 1</button>
+    <button onclick="display2()">btn 2</button>
+    <button onclick="display3()">btn 3</button>
+
+    <div id="demo">
+        Welcome to Cybrom
+    </div>
+</body>
+</html>
