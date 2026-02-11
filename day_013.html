@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(black,white);
+        }
+        #box{
+            margin: auto;
+            border: 2px solid black;
+            width: 25%;
+            /* background-color: black; */
+            background: linear-gradient(rgb(77, 72, 72),gray, rgb(67, 67, 95));
+            height: 70vh;
+            box-shadow: 10px 10px 15px rgb(80, 46, 40);
+        }
+        #ansbox{
+            font-size: 42px;
+            height: 20%;
+            width: 92%;
+            margin: 3%;
+            margin-bottom: 15px;
+            border: 1px solid white;
+            background-color: rgb(92, 84, 84);
+            color: wheat;
+
+        }
+        button{
+            padding: 1%;
+            height: 50px;
+            width: 20%;
+            margin: 2%;
+            font-size: 30px;
+            /* background-color: rgb(219, 182, 133); */
+            background-color: rgb(83, 73, 73);
+            color: wheat;
+            box-shadow: 3px 3px 5px rgb(60, 55, 65);
+        }
+        #op{
+            /* background-color: rgb(233, 233, 150); */
+            /* background-color: rgb(77, 72, 72); */
+            background: linear-gradient(rgb(77, 72, 72),rgb(148, 74, 74), rgb(67, 67, 95));
+        }
+        H1{
+            text-align: center;
+            margin-top: 5%;
+            color: rgb(68, 54, 56);
+            font-size: 52px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="ansbox">
+        
+        <button id="op" onclick="document.getElementById('ansbox').value = ''">AC</button>
+        <button id="op" onclick="document.getElementById('ansbox').value += '%'">%</button>
+        <button id="op" onclick="DEL()">DEL</button>
+        <button id="op" onclick="document.getElementById('ansbox').value += '+'">+</button>
+
+        <button onclick="document.getElementById('ansbox').value += 7">7</button>
+        <button onclick="document.getElementById('ansbox').value += 8">8</button>
+        <button onclick="document.getElementById('ansbox').value += 9">9</button>
+        <button id="op" onclick="document.getElementById('ansbox').value += '-'">-</button>
+
+        <button onclick="document.getElementById('ansbox').value += 4">4</button>
+        <button onclick="document.getElementById('ansbox').value += 5">5</button>
+        <button onclick="document.getElementById('ansbox').value += 6">6</button>
+        <button id="op" onclick="document.getElementById('ansbox').value += '*'">*</button>
+
+        <button onclick="document.getElementById('ansbox').value += 1">1</button>
+        <button onclick="document.getElementById('ansbox').value += 2">2</button>
+        <button onclick="document.getElementById('ansbox').value += 3">3</button>
+        <button id="op" onclick="document.getElementById('ansbox').value += '/'">/</button>
+
+        <button onclick="document.getElementById('ansbox').value += '.'">.</button>
+        <button onclick="document.getElementById('ansbox').value += 0">0</button>
+        <button onclick="document.getElementById('ansbox').value += '00'">00</button>
+        <button style="background:linear-gradient(brown,red,yellow)" onclick="document.getElementById('ansbox').value = eval(document.getElementById('ansbox').value)">=</button>        
+    </div>
+    <h1>CALCULATOR</h1>
+
+</body>
+<script>
+    function DEL(){
+        let val = document.getElementById('ansbox').value;
+        let newval = val.slice(0,val.length -1);
+        // document.write("<h1>", newval,"</h1>");
+        document.getElementById("ansbox").value = newval;
+        document.getElementById("ansbox").focus();
+    }
+</script>
+</html>
