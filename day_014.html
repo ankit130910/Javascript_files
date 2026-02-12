@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var myInterval;
+        function myfun(){
+            document.getElementById("demo").innerHTML += " Cybrom !";
+        }
+
+        function display(){
+            myInterval = setInterval(myfun,1000);
+        }
+
+        function mystop(){
+            clearInterval(myInterval);
+        }
+
+        var w = 10;
+        var myInterval2;
+        function myfun2(){
+            let obj = document.getElementById("box");
+            w += 10;
+            obj.style.width = w + 'px';
+        }
+        function display2(){
+            myInterval2 =  setInterval(myfun2,10);
+        }
+        function mystop2(){
+            clearInterval(myInterval2);
+        }
+
+        var myTimeout;
+        function myFun3(){
+            document.getElementById("wish").innerHTML = "HAppy Birthday";
+        }
+        function display3(){
+            myTimeout = setTimeout(myFun3,5000);
+        }
+
+        function mystop3(){
+            clearTimeout(myTimeout);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">Click Here</button>
+    <button onclick="mystop()">Stop</button>
+    <p id="demo">Welcome !</p>
+
+    <button onclick="display2()">Click Here</button>
+    <button onclick="mystop2()">Stop</button>
+    <div id="box"></div>
+
+    <button onclick="display3()">WISh</button>
+    <button onclick="mystop3()">Stop wish</button>
+    <div id="wish"></div>
+</body>
+<style>
+    #box{
+        height: 50px;
+        width: 10px;
+        background-color: red;
+    }
+</style>
+</html>
