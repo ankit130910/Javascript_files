@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            background: lightgreen;
+            overflow: hidden;
+        }
+
+        #myball {
+            position: absolute;
+            top: 250px;
+            left: 80px;
+            height: 60px;
+            width: 60px;
+        }
+
+        .player {
+            position: absolute;
+            top: 180px;
+            width: 60px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .head {
+            height: 30px;
+            width: 30px;
+            background: black;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .body {
+            height: 70px;
+            width: 10px;
+            background: black;
+            margin: auto;
+        }
+
+        #p1 { left: 20px; }
+        #p2 { right: 20px; }
+
+    </style>
+</head>
+<body>
+      <!-- Left Player -->
+    <div class="player" id="p1" onclick="passRight()">
+        <div class="head"></div>
+        <div class="body"></div>
+    </div>
+
+    <!-- Right Player -->
+    <div class="player" id="p2" onclick="passLeft()">
+        <div class="head"></div>
+        <div class="body"></div>
+    </div>
+
+    <!-- Ball -->
+    <img src="https://sfunpay.com/s/file/lb/8m/efootball_pes.lb8m94s0hn.jpg"
+        alt="ball" id="myball">
+</body>
+
+ <script>
+        var interval;
+        var startX = 80;
+        var startY = 250;
+        var progress = 0;
+
+        function curvePass(targetX) {
+
+            clearInterval(interval);
+            progress = 0;
+
+            interval = setInterval(function () {
+
+                let ball = document.getElementById("myball");
+
+                progress += 0.02;   // speed control
+
+                if (progress >= 1) {
+                    clearInterval(interval);
+                }
+
+                // X movement (linear)
+                let x = startX + (targetX - startX) * progress;
+
+                // Y movement (curve using sin)
+                let height = 120; // curve height
+                let y = startY - Math.sin(progress * Math.PI) * height;
+
+                ball.style.left = x + "px";
+                ball.style.top = y + "px";
+
+            }, 20);
+        }
+
+        function passRight() {
+            startX = 80;
+            let target = window.innerWidth - 140;
+            curvePass(target);
+        }
+
+        function passLeft() {
+            startX = window.innerWidth - 140;
+            curvePass(80);
+        }
+    </script>
+</html>
