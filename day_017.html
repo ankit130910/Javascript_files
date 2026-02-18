@@ -1,0 +1,49 @@
+<!--               BOM -  BROWSER OBJECT MODEL       -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button style="height: 70px; width: 150px; background-color: blueviolet; color: white;" onclick="display()">Delete</button>
+
+
+
+    <script>
+        // function demo(){
+        //     let num1 = prompt("Enter number 1")
+        //     let num2 = prompt("Enter number 2")
+
+        //     console.log(num1 + num2);     // By default output - String
+
+        //     // Typecasting to print sum of numbers
+        //     // there are three methods     parseInt - parses string into integer
+        //                                 //    parseFloat - parses string into float
+        //                                 //   Number() - parses as requires
+        //     console.log(Number(num1) + Number(num2)); 
+            
+
+        // }
+        // demo();
+
+
+        // function checkAge(){
+        //     let age = prompt("Enter your age");
+        //     age >= 18 ? console.log("can vote") : console.log("cannot vote");
+        // }
+        // checkAge();
+
+        function display(){
+            let a = confirm("want to delete");
+            a  ? alert("deleted") : alert("cancelled");
+            
+        }
+
+
+    </script>
+</body>
+</html>
