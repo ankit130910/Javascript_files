@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">click me</button>
+
+    <script>
+        // // Simple function
+        // function myfun(){
+
+        // }
+        // // Arrow function
+        // let myfun = () =>{
+
+        // }
+
+        // function myfun(a,b){
+        //     return a+b;
+        // }
+        // let myfun = () =>{
+        //     return a+b;
+        // }
+        // // if code is of line inside function 
+        // let myfun = () => a+b
+
+        let fun = () =>{
+            alert("Working....")
+        }
+        // fun();
+
+        let fun2=()=>{
+            let fruits = ["apple","mango","Banana"];
+            console.log(fruits);            
+            fruits.unshift("Grapes","cucumber");
+            console.log(fruits);            
+            fruits.shift();
+            console.log(fruits);            
+        }
+        // fun2();
+
+        let fun3 = () => {
+            let fruits = ["apple","mango","Banana"];
+            console.log(fruits.join(" "));
+            console.log(fruits.join(""));
+            console.log(fruits.join(","));            
+        }
+        // fun3();
+
+        let fun4 = () => {
+            let abc = "cybrom"
+            let arr = abc.split("");
+            // arr.reverse();
+            console.log(arr.reverse().join(""));
+            
+        }
+        fun4();
+    </script>
+</body>
+</html>

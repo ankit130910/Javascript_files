@@ -21,7 +21,15 @@
                 console.log(i);              
             }
         }
-        myfun2();
+        // myfun2();
+
+
+        let s = "I live in Bhopal. I study in Bhopal";
+        console.log(s.replace("bhopal", "indore"));       // case sensitive and changes once
+        console.log(s.replace(/bhopal/i, "indore"));      // ignore case and changes once
+        console.log(s.replace(/bhopal/ig, "indore"));     // ignore case and changes globally
+
+        
     </script>
 </body>
 </html>
