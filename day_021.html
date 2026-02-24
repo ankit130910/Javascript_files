@@ -1,0 +1,46 @@
+<!-- DOM -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text"></p>
+    <button onclick="display()">Click Here</button>
+
+    <p id="text2">This is html</p>
+    <button onclick="display2()">Hide it</button>
+    <button onclick="display3()">Bring Back</button>
+
+    <p id="text3">This is html of text 3</p>
+    <button onclick="display4()">Switch</button>
+
+    <script>
+        let display = () => {
+            let pTag = document.getElementById("text");
+            pTag.innerHTML = "This is from js"
+        }
+        let display2 = () => {
+            let pTag = document.querySelector("#text2")
+            pTag.style.display = 'none';
+        }
+        let display3 = () => {
+            let pTag = document.querySelector("#text2")
+            pTag.style.display = 'block'
+        }
+        let display4 = () => {
+            let pTag = document.querySelector("#text3")
+            if (pTag.style.display == 'none')
+                pTag.style.display = 'block';
+            else
+                pTag.style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
