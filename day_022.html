@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">0</h1>
+    <button onclick="increase()">Increment it </button>
+    <button id="ok" onclick="decrease()">Decrement it </button>
+
+
+    <script>
+            let b = 0;
+            let btn = document.querySelector("#ok")
+                btn.disabled = true;
+        let increase = () => {
+            let a = document.querySelector("#demo");
+            // b++;
+            a.innerHTML = ++b;
+            if(b > 0){
+                let btn = document.querySelector("#ok")
+                btn.disabled = false;
+            }
+        }
+        let decrease = () => {
+            
+            let a = document.querySelector("#demo");
+            // b--;
+            a.innerHTML = --b;
+            if(b === 0){
+                let btn = document.querySelector("#ok")
+                btn.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
+
