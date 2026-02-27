@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 700px;
+        }
+    </style>
 </head>
 <body>
-    <img src="" alt="">
+    <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" alt="">
+
+    <button onclick="change()">Change image</button>
 
 
     <script>
-
+        let a = "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg";
+        let b = "https://thumbs.dreamstime.com/b/wood-bridge-to-rain-forest-thailand-very-fresh-big-air-very-good-82509225.jpg"
+        let c = "https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_user_personalization&w=740&q=80";
+        let d = "https://media.istockphoto.com/id/1550071750/photo/green-tea-tree-leaves-camellia-sinensis-in-organic-farm-sunlight-fresh-young-tender-bud.jpg?s=612x612&w=0&k=20&c=RC_xD5DY5qPH_hpqeOY1g1pM6bJgGJSssWYjVIvvoLw=";
+        let e = "https://img.freepik.com/free-photo/courage-man-jump-through-gap-hill-business-concept-idea_1323-262.jpg?semt=ais_user_personalization&w=740&q=80";
+        let change = () =>{
+            let s = document.querySelector("img");
+            let list = [a,b,c,d,e];
+            let n = Math.floor(Math.random()*10)%5;
+            s.src = list[n];
+        }
     </script>
 </body>
 </html>
