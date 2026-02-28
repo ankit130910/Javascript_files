@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        #other ul{
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <img src="https://m.media-amazon.com/images/I/812vmmHIwvL._SY575_.jpg" alt="" id="image">
+    </div>
+    <div id="other">
+        <ul>
+            <li><button onclick="change()">
+                <img src="https://m.media-amazon.com/images/I/41gWi9T220L._SS40_.jpg" alt="" id="first">
+            </button></li>
+            <li><button onclick="change2()">
+                <img src="https://m.media-amazon.com/images/I/31u8awTeW6L._SS40_.jpg" alt="" id="sec">
+            </button></li>
+            <li>
+                <button onclick="change3()">
+                    <img src="https://m.media-amazon.com/images/I/41ruA2-oWEL._SS40_.jpg" alt="" id="third">
+                </button>
+            </li>
+            <li><button onclick="change4()">
+                <img src="https://m.media-amazon.com/images/I/41G3Jam9h9L._SS40_.jpg" alt="" id="fourth">
+            </button></li>
+            <li><button onclick="change5()">
+                <img src="https://m.media-amazon.com/images/I/41htc-RCYjL._SS40_.jpg" alt="" id="fifth">
+            </button></li>
+        </ul>
+    </div>
+
+
+    <script>
+        let change = () =>{
+            // let x = document.querySelector("#first").src;
+            let main = document.querySelector("#image");
+            main.src = "https://m.media-amazon.com/images/I/812vmmHIwvL._SY575_.jpg";  
+        }
+        let change2 = () =>{
+            // let x = document.querySelector("#sec").src;
+            let main = document.querySelector("#image");
+            main.src = "https://m.media-amazon.com/images/I/71aBrsXf3mL._SY575_.jpg";  
+        }
+        let change3 = () =>{
+            // let x = document.querySelector("#third").src;
+            let main = document.querySelector("#image");
+            main.src = "https://m.media-amazon.com/images/I/81prGCIBBhL._SY575_.jpg";  
+        }
+        let change4 = () =>{
+            // let x = document.querySelector("#fourth").src;
+            let main = document.querySelector("#image");
+            main.src = "https://m.media-amazon.com/images/I/81hZZ2wguTL._SY575_.jpg";  
+        }
+        let change5 = () =>{
+            // let x = document.querySelector("#fifth").src;
+            let main = document.querySelector("#image");
+            main.src = "https://m.media-amazon.com/images/I/81dBi0KgMXL._SY575_.jpg";  
+        }
+    </script>
+</body>
+</html>

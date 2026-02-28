@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p id="errname"></p>
+        <label for="name">Name</label>
+        <input type="text" id="name"> <br><br>
+        
+        <p id="errnum"></p>
+        <label for="num">Number</label>
+        <input type="number" id="num"> <br><br>
+
+        <button onclick="return check()">Submit</button>
+    </form>
+
+
+
+    <script>
+        let check = () => {
+            let Name = document.querySelector("#name").value.trim()
+            let Errname = document.querySelector("#errname")
+
+            if(Name == ""){
+                Errname.innerHTML = "Name cannot be empty";
+                return false;
+            }else{
+                Errname.style.display = 'none'
+            }
+
+            let Num = document.querySelector("#num").value.trim()
+            let Errnum = document.querySelector("#errnum")
+
+            if(num.length != 10){
+                Errnum.innerHTML = "Number must contain 10 digits";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
