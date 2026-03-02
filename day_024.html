@@ -1,0 +1,222 @@
+<!--           FORM VALIDATION         -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url("https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-spooky-road-in-fog-free-image.jpg?w=600&quality=80");
+            background-size: cover;
+        }
+        .image{
+            background: url("https://i.pinimg.com/736x/98/78/d8/9878d8ebd2d1ba1b08f9e3576da8648e.jpg");
+            height: 100%;
+            width: 50%;
+            background-size: cover;
+        }
+        .container{
+            border: 2px solid black;
+            width: 50%;
+            /* margin: 5% 30% 0 20%; */
+            margin: auto;
+            margin-top: 5%;
+            display: flex;
+            /* justify-content: space-between; */
+            height: 70vh;
+            background: linear-gradient(#2C2B30);
+            box-shadow: 15px 15px 15px #635b57;
+        }
+
+        p {
+            color: red;
+        }
+
+        form{
+            margin-left: 2%;
+            color: #d6d6d6;
+            text-shadow: 5px 5px 5px gray;
+            font-size: 16px;
+            /* border: 2px solid black; */
+            padding: 20px 5%;
+        }
+        form > input{
+            background-color: #f2c4ce;
+            margin-left: 5px;
+        }
+        #female{
+            margin-left: 20px;
+        }
+
+        button{
+            color: #d6d6d6;
+            font-size: 16px;
+            padding: 10px;
+            margin-left: 5%;
+            width: 80px;
+            background-color: #534745;
+            box-shadow: 3px 3px 5px #1f1d1c;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="" alt="">
+        </div>
+
+
+
+        <form action="#">
+
+        <p id="errname"></p>
+        <label for="name">Name :</label>
+        <br>
+        <input type="text" id="name"> <br><br>
+
+        <p id="errfname"></p>
+        <label for="fname">Father's Name :</label>
+        <br>
+        <input type="text" id="fname"> <br><br>
+
+        <p id="errgender"></p>
+        <label for="gender">Gender :</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="male" value="Male">
+        <label for="male">Male</label> <br><br>
+
+        <p id="errnum"></p>
+        <label for="num">Mobile Number :</label>
+        <br>
+        <input type="text" id="num"> <br><br>
+
+        <p id="erremail"></p>
+        <label for="email">Email :</label>
+        <br>
+        <input type="text" id="email"> <br><br>
+
+        <p id="errpass"></p>
+        <label for="pass">Password :</label>
+        <br>
+        <input type="text" id="pass"> <br><br>
+
+        <p id ="errcpass"></p>
+        <label for="cpass">Confirm Password :</label>
+        <br>
+        <input type="text" id="cpass"> <br><br>
+
+        <button type="submit" onclick="return check()">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let check = () => {
+            let Name = document.querySelector("#name").value.trim()
+            let Fname = document.querySelector("#fname").value.trim()
+            // let Gender = document.querySelector("#gender").value.trim()
+            let Num = document.querySelector("#num").value.trim()
+            let Email = document.querySelector("#email").value.trim()
+            let Pass = document.querySelector("#pass").value.trim()
+            let Cpass = document.querySelector("#cpass").value.trim()
+
+
+            let Errname = document.querySelector("#errname")
+            let Errfname = document.querySelector("#errfname")
+            let Errnum = document.querySelector("#errnum")
+            let Erremail = document.querySelector("#erremail")
+            let Errpass = document.querySelector("#errpass")
+            let Errcpass = document.querySelector("#errcpass")
+
+            // Validations for name
+            if (Name == "") {
+                Errname.innerHTML = "Name cannot be empty";
+                return false;
+            } else {
+                Errname.innerHTML = ''
+            }
+
+            // Validations for Father's name
+            if (Fname == "") {
+                Errfname.innerHTML = "Father's Name cannot be empty";
+                return false;
+            } else {
+                Errfname.innerHTML = ''
+            }
+
+            // Validations for Mobile Number
+            if (isNaN(Num)) {
+                Errnum.innerHTML = "Mobile Number must only contain digits";
+                return false;
+            } else if (Num.length != 10) {
+                Errnum.innerHTML = "Mobile Number must contain 10 digits";
+                return false;
+            } else {
+                Errnum.innerHTML = ''
+            }
+
+            // Validations for email
+            if (Email == "") {
+                Erremail.innerHTML = "Email cannot be Empty"
+                return false;
+            } else if (!(Email.includes('@') && Email.endsWith('.com'))) {
+                Erremail.innerHTML = "Please write a valid email address"
+                return false;
+            } else {
+                Erremail.innerHTML = ''
+            }
+
+            if (Pass.length < 8) {
+                Errpass.innerHTML = "Password must contain atleast 8 characters"
+                return false;
+            } else if (!Pass.match(/[!@#$%^&*]/)) {
+                Errpass.innerHTML = "Password must have 1 special character"
+                return false;
+            } else if (!Pass.match(/[A-Z]/)) {
+                Errpass.innerHTML = "Password must have 1 uppercase character"
+                return false;
+            } else if (!Pass.match(/[a-z]/)) {
+                Errpass.innerHTML = "Password must have 1 lowercase character"
+                return false;
+            } else if (!Pass.match(/[0-9]/)) {
+                Errpass.innerHTML = "Password must have 1 numerical character"
+                return false;
+            } else {
+                Errpass.innerHTML = ''
+            }
+            if (Pass != Cpass) {
+                Errcpass.innerHTML = "Password is not same";
+                return false;
+            } else {
+                Errcpass.innerHTML = ''
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

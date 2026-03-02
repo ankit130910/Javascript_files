@@ -21,7 +21,7 @@
         <label for="num">Number</label>
         <input type="number" id="num"> <br><br>
 
-        <button onclick="return check()">Submit</button>
+        <button onclick="check()">Submit</button>
     </form>
 
 
@@ -41,10 +41,11 @@
             let Num = document.querySelector("#num").value.trim()
             let Errnum = document.querySelector("#errnum")
 
-            if(num.length != 10){
+            if(Num.length != 10){
                 Errnum.innerHTML = "Number must contain 10 digits";
                 return false;
             }
+            return true;
         }
     </script>
 </body>
