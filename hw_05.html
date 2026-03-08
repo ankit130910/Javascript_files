@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="greater()">Check which number is greater</button> -->
+
+    <!-- <button onclick="table()">Number Table</button>
+    <div id="table"></div> -->
+
+    <!-- <button onclick="convert()">to uppercase</button> -->
+
+    <!-- <button onclick="convert2()">programming</button> -->
+
+    <!-- <button onclick="sor()">sort and reverse</button> -->
+
+    <!-- <button onclick="replce()">Replace CSS</button> -->
+
+    <!-- <button onclick="update()">DOM</button>
+    <p id="chng">Lorem ipsum dolor sit amet.</p> -->
+
+    <!-- <button onclick="changebg()">Change background</button> -->
+
+    <!-- <button onclick="displaytext()">Display input text</button> <br>
+    Enter text here <input type="text" id="txt">
+    <p id="displaytxt"></p> -->
+
+    <!-- <button onclick="chngtxtclr()">Change text color</button>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+    <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing.</div> -->
+
+    <button onclick="error()">Valid input</button>
+    Enter your name <input type="text" id="name">
+    <div id="err"></div>
+
+
+
+
+    <script>
+        let greater = () => {
+            let a = prompt("Enter first Number")
+            let b = prompt("Enter second Number")
+            a > b ? alert(`${a} is greater`) : (a == b ? alert(`Both are equal`) : alert(`${b} is greater`))
+        }
+
+        let table = () => {
+            let n = prompt("Enter a number");
+            let t = document.getElementById('table')
+            for (let i = 1; i <= 10; i++) {
+                t.innerHTML += `${n} * ${i} = ${n * i} <br>`
+            }
+        }
+
+
+        let convert = () => {
+            let s = "   javascript learning   "
+            console.log(s);
+            console.log(s.trim().toUpperCase());
+        }
+
+        let convert2 = () => {
+            let s2 = "Programming"
+            console.log(s2);
+            console.log(`length of string = ${s2.length} and character at position 5 = ${s2.charAt(4)}`);
+        }
+
+        let sor = () => {
+            let arr = [12, 45, 8, 34, 90]
+            console.log(arr);
+            console.log(`sorted array : ${arr.sort( (a,b) => a-b) }`);
+            console.log(`Reversed array : ${arr.sort( (a,b) => a-b ).reverse()}`);
+        }
+
+        let replce = () => {
+            let arr = ["HTML","CSS","JavaScript","Python"]
+            console.log(arr);
+            let i = arr.indexOf('CSS');
+            arr[i] = 'React';
+            console.log(`Replaced CSS : ${arr}`);
+        }
+
+        let update = () => {
+            let chng = document.querySelector("#chng")
+            chng.innerHTML = "DOM updated succesfully"
+        }
+
+        let changebg = () =>{
+            let a = document.querySelector('body')
+            a.style.backgroundColor = 'blueviolet'
+        }
+
+        let displaytext = () =>{
+            let val = document.querySelector('#txt').value
+            document.querySelector('#displaytxt').innerHTML = val
+        }
+
+        let chngtxtclr = () =>{
+            let boxes = document.getElementsByClassName('box')
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.color = 'red'
+            }
+        }
+
+        let error = () =>{
+            let val = document.querySelector('#name').value
+            if(val == '')
+              document.getElementById('err').innerHTML = 'input cannot be empty'
+        }
+
+    </script>
+</body>
+
+</html>
