@@ -1,0 +1,92 @@
+                 <!-- Map and Filter  // for Each // Array Of Object-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #demo{
+            display: flex;
+            background-color: bisque;
+            /* width: 500px;
+            height: 30vh; */
+        }
+        /* p{
+            background-color: rgb(197, 150, 92);
+            display: flex;
+        } */
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+    <script>
+        let num = [1,2,3,4,5]
+        let newArr = num.map( (e) =>{
+            return e*3;
+        } )
+        console.log(newArr);
+        
+        let num2 = [1,2,3,4,5]
+        let newArr2 = num.map( (e) =>{
+            return e%2==0;
+        } )
+        console.log(newArr2);
+
+        let num3 = [1,2,3,4,5]
+        let newArr3 = num.filter( (e) =>{
+            return e%2==0;
+        } )
+        console.log(newArr3);
+
+        // Use of for each in js
+        num3.forEach( (e)=>{
+            console.log(e);
+        } )
+
+        let arr4 = [7,15,8,11,10]
+        let newArr4 = arr4.filter( (e) => {
+            return e>10;
+        } )
+        console.log(newArr4);
+        
+
+        // Array Of Object
+        let Aoo = [ {
+            name:"Ankit",
+            Age : 22,
+            city:"Jabalpur"
+        }, {
+            name:"Unnati",
+            Age : 23,
+            city:"Bhopal"
+        }, {
+            name:"Rishabh",
+            Age : 27,
+            city:"Banglore"
+        } ]
+
+        let i = 1;
+        // let demo = document.querySelector("#demo")
+        let names = Aoo.map( (e) => {
+        let box = document.querySelector(`#box${i}`)
+        // document.createElement
+        // demo.append(div,)
+            box.innerHTML = e.name;
+            box.innerHTML += "<br>" + e.Age
+            box.innerHTML += "<br>" + e.city
+            i++
+        } )
+    </script>
+</body>
+</html>                  
