@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+
+        <tbody id="datalist">
+
+        </tbody>
+    </table>
+    
+
+
+
+    <script>
+       let fetchdata = async(e)=>{
+          let api = "https://jsonplaceholder.typicode.com/comments"
+          let response = await fetch(api)
+          let data = await response.json()
+
+
+          console.log(data);
+          
+          let show = document.querySelector('#datalist')
+          data.map( (e)=>{
+            show.innerHTML += ` 
+            <tr>
+                <td>${e.id} </td>
+                <td>${e.name} </td>
+                <td>${e.email} </td>
+                <td>${e.body} </td>
+            </tr> 
+            `
+          } )
+
+        } 
+        fetchdata()
+        
+    </script>
+</body>
+</html>

@@ -7,17 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="demo">hello</h1>
 
 
 
     <script>
+        
         let fetchData = async()=>{
             let api = 'https://jsonplaceholder.typicode.com/posts'
-            let res = await fetch(api)
+            let res = await fetch(api)     // returns promise
             let data = await res.json()
-            console.log(data);
+            // let d = JSON.parse(data)
+            // let demo = document.querySelector('#demo');
             
+            // data.map( (e)=>{
+            //     demo.innerHTML += e.id
+            // } )
+
+
+            // .innerHTML = JSON.stringify(d, null, 2)
+            console.log(data);
         }
         fetchData()
     </script>

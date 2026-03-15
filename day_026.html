@@ -79,13 +79,13 @@
         let i = 1;
         // let demo = document.querySelector("#demo")
         let names = Aoo.map( (e) => {
-        let box = document.querySelector(`#box${i}`)
-        // document.createElement
-        // demo.append(div,)
-            box.innerHTML = e.name;
-            box.innerHTML += "<br>" + e.Age
-            box.innerHTML += "<br>" + e.city
-            i++
+        // let box = document.querySelector(`#box${i}`)
+            let box1 = document.createElement(div)
+            demo.append(box1, `${e.name} <br> ${e.Age} <br> ${e.city} `)
+            // box.innerHTML = e.name;
+            // box.innerHTML += "<br>" + e.Age
+            // box.innerHTML += "<br>" + e.city
+            // i++
         } )
     </script>
 </body>
