@@ -15,20 +15,19 @@
         #demo{
             display: flex;
             background-color: bisque;
-            /* width: 500px;
-            height: 30vh; */
+            justify-content: space-between;
+            /* gap: 10px; */
+            width: 250px;
+            padding: 5px;
+            margin: auto;
+            /* height: 30vh; */
         }
-        /* p{
-            background-color: rgb(197, 150, 92);
-            display: flex;
-        } */
+        
     </style>
 </head>
 <body>
     <div id="demo">
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
+        
     </div>
     <script>
         let num = [1,2,3,4,5]
@@ -80,8 +79,9 @@
         // let demo = document.querySelector("#demo")
         let names = Aoo.map( (e) => {
         // let box = document.querySelector(`#box${i}`)
-            let box1 = document.createElement(div)
-            demo.append(box1, `${e.name} <br> ${e.Age} <br> ${e.city} `)
+            let box1 = document.createElement('div')
+            box1.innerHTML = `${e.name} <br> ${e.Age} <br> ${e.city} `
+            demo.appendChild(box1)
             // box.innerHTML = e.name;
             // box.innerHTML += "<br>" + e.Age
             // box.innerHTML += "<br>" + e.city

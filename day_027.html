@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="demo">hello</h1>
+    <p id="demo">hello</p>
 
 
 
@@ -18,11 +18,12 @@
             let res = await fetch(api)     // returns promise
             let data = await res.json()
             // let d = JSON.parse(data)
-            // let demo = document.querySelector('#demo');
+            let demo = document.querySelector('#demo');
             
-            // data.map( (e)=>{
-            //     demo.innerHTML += e.id
-            // } )
+            data.map( (e)=>{
+                demo.innerHTML += 
+                ` ${e.id}  ---  ${e.title} ----  ${e.body}  <br> <br>`
+            } )
 
 
             // .innerHTML = JSON.stringify(d, null, 2)
