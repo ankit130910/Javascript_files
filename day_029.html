@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Welcome <span id="username"></span>
+
+    <button type="submit" onclick="login()">Login</button>
+    <!-- <button id="logout()">Logout</button> -->
+
+    <script>
+        let login = () => {
+            localStorage.setItem('username', 'Ankit')
+            location.reload()
+            
+        }
+        let name = localStorage.getItem('username')
+        document.querySelector('#username').innerHTML = name
+
+    </script>
+</body>
+
+</html>
